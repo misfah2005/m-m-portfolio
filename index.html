@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Misfah Portfolio</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #0f172a;
+            color: white;
+            line-height: 1.6;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 25px;
+            background: #1e293b;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            flex-wrap: wrap;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .hero,
+        .about,
+        .contact {
+            background: #1e293b;
+            padding: 40px 20px;
+            border-radius: 20px;
+            margin: 20px;
+            text-align: center;
+        }
+
+        /* PROFILE IMAGE (NO BACKGROUND) */
+        .profile-container {
+            background: transparent;
+            padding: 0;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid #38bdf8;
+            transition: 0.4s;
+        }
+
+        /* Zoom effect */
+        .profile-container:hover .profile-pic {
+            transform: scale(1.15);
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin: 20px;
+        }
+
+        .project-card {
+            background: #293950;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            background: #334155;
+            transform: scale(1.05);
+        }
+
+        .skill-bar {
+            background: #0f70a5;
+            border-radius: 15px;
+            margin-bottom: 15px;
+        }
+
+        .skill-bar span {
+            display: block;
+            height: 30px;
+            background: linear-gradient(90deg, #3f9eca, #1d4ed8);
+            width: 0%;
+            border-radius: 15px;
+            text-align: right;
+            padding-right: 10px;
+            color: black;
+            line-height: 30px;
+            transition: 2s;
+        }
+
+        .social-icons a {
+            font-size: 24px;
+            margin: 0 10px;
+            color: #95ceeb;
+        }
+
+        footer {
+            background: #1e293b;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+            nav ul {
+                justify-content: center;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">Misfah</div>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" data-aos="zoom-in">
+
+        <div class="profile-container">
+            <img src="ChatGPT Image Feb 25, 2026, 08_42_50 PM.png" class="profile-pic">
+        </div>
+
+        <h1>Hi, I’m Misfah, Computer science & Software Engineering Student</h1>
+        <p>Web Developer | Photographer | Video Editor</p>
+
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>Email: <a href="mailto:misfahmohamed0@gmail.com">misfahmohamed0@gmail.com</a></p>
+    </section>
+
+    <section id="projects">
+        <h2 style="text-align:center;">Projects</h2>
+        <div class="projects">
+            <div class="project-card">Frontend Project</div>
+            <div class="project-card">Backend Project</div>
+            <div class="project-card">AI Project</div>
+            <div class="project-card">Other Projects</div>
+        </div>
+    </section>
+
+    <section id="skills" class="about">
+        <h2>Skills</h2>
+        <div class="skill-bar"><span data-width="90%">HTML 90%</span></div>
+        <div class="skill-bar"><span data-width="85%">CSS 85%</span></div>
+        <div class="skill-bar"><span data-width="80%">JS 80%</span></div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact</h2>
+        <p>Email: misfahmohamed0@gmail.com</p>
+        <p>Phone: +94 759797927</p>
+    </section>
+
+    <footer>
+        <p>© 2026 Misfah</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+        window.addEventListener('load', () => {
+            document.querySelectorAll('.skill-bar span').forEach(span => {
+                span.style.width = span.getAttribute('data-width');
+            });
+        });
+    </script>
+
+</body>
+
+</html>
